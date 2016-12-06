@@ -7,4 +7,4 @@ before_install:
   - docker build -t bootstrap-sdl2 .
 
 script:
-  - docker run bootstrap-sdl2 make tests
+  - docker run -v `pwd`:/project bootstrap-sdl2 make tests

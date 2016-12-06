@@ -23,3 +23,4 @@ run:
 init:
 	sed -i 's/{project-name}/$(NAME)/g' Makefile
 	sed -i 's/{project-name}/$(NAME)/g' CMakeLists.txt
+	sed -i 's/{project-name}/$(NAME)/g' Dockerfile
