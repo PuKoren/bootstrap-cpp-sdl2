@@ -1,6 +1,8 @@
 # bootstrap-cpp-sdl2
 cpp/sdl2 bootstrap project structure and files, to clone and start coding
 
+[![Build Status](https://travis-ci.org/PuKoren/bootstrap-cpp-sdl2.svg?branch=travis)](https://travis-ci.org/PuKoren/bootstrap-cpp-sdl2)
+
 # How to use
 .1 Clone the repo
 ```
