@@ -57,5 +57,8 @@ target_link_libraries(project
   ${SDL2_TTF_LIBRARY}
 )
 
+# Include extras like linter configuration if available
 include(cmake/clang-dev-tools.cmake)
+
+# Include CMake subdir for tests
 add_subdirectory (test)

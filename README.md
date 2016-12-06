@@ -8,6 +8,7 @@ git clone git@github.com:PuKoren/bootstrap-cpp-sdl2.git
 ```
 
 .2 Init script
+Replace project_name by your desired binary name
 ```
 make init NAME=project_name
 ```
@@ -30,6 +31,7 @@ make run
 ```
 
 .6 Start coding
+
 Go to `src/Application.cpp` and add your logic
 
 # Commands
@@ -51,13 +53,28 @@ make format
 make tests
 ```
 
-# Dependencies
-## Core (until Dockerfile is done)
+# With docker
+Intermediate image to develop will be around 280MB
+## Creating your intermediate container
+```
+docker build -t myContainer .
+```
+
+## Compile, lint, tests
+```
+docker run --user `id -u` -v `pwd`:/project myContainer make build
+docker run --user `id -u` -v `pwd`:/project myContainer make tests
+docker run --user `id -u` -v `pwd`:/project myContainer make release
+```
+**make lint is not supported yet as Alpine don't have clang-tidy binary in packages yet**
+
+# Without docker
+## Core deps
 ```
 sudo pacman -S sdl2 sdl2_image sdl2_ttf
 ```
 
-## Lint and tests (until Dockerfile is done)
+## Lint and tests
 Used for linting and unit tests
 ```
 sudo pacman -S clang-tools-extra cppunit
