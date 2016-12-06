@@ -81,3 +81,6 @@ Used for linting and unit tests
 ```
 sudo pacman -S clang-tools-extra cppunit
 ```
+
+# Windows
+lol
