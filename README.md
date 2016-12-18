@@ -4,25 +4,26 @@ cpp/sdl2 bootstrap project structure and files, to clone and start coding
 [![Build Status](https://travis-ci.org/PuKoren/bootstrap-cpp-sdl2.svg?branch=travis)](https://travis-ci.org/PuKoren/bootstrap-cpp-sdl2)
 
 # How to use
-.1 Clone the repo
+.1 Fetch this repository files
 ```
-git clone git@github.com:PuKoren/bootstrap-cpp-sdl2.git
+git --git-dir=/dev/null clone --depth=1 git@github.com:PuKoren/bootstrap-cpp-sdl2.git my-new-project
 ```
 
-.2 Init script
-Replace project_name by your desired binary name
+.2 Init the files you fetched (project name)
+Replace project_name by your desired binary name (no spaces)
 ```
 make init NAME=project_name
 ```
 
-.3 Change origin to your repo URL
+.3 Git init your project and set remote URL
 ```
-git remote set-url origin git@github.com:{handle}/{repo-name}.git
+git init
+git remote set-url origin {repo_url}
 ```
 
 .4 Push to your repo
 ```
-git push -f
+git push
 ```
 
 .5 Build & run
