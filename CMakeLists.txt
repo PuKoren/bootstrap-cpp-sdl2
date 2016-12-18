@@ -47,11 +47,11 @@ include_directories(SYSTEM
 
 file(GLOB_RECURSE PROJECT_SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
-add_executable(project
+add_executable({project-name}
   ${PROJECT_SOURCE_FILES}
 )
 
-target_link_libraries(project
+target_link_libraries({project-name}
   ${SDL2_LIBRARY}
   ${SDL2_IMAGE_LIBRARY}
   ${SDL2_TTF_LIBRARY}
